@@ -1,0 +1,16 @@
+{% extends "accounts/base.html" %}
+
+{% block title %}
+    Dashboard
+{% endblock title %}
+
+
+
+{% block content %}
+    <div align="right">
+        <a href="{% url "accounts:logout" %}"><button>Logout</button></a>
+    </div>
+    {% block dash-content %}
+
+    {% endblock dash-content %}
+{% endblock %}

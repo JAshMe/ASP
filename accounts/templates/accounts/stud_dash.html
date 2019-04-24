@@ -1,0 +1,15 @@
+{% extends "accounts/dash_base.html" %}
+
+{% comment %}
+    Context:
+        {
+            user: User object
+        }
+{% endcomment %}
+
+
+
+{% block dash-content %}
+    Welcome {{ user.get_full_name }}
+    <br>This is Student Dashboard
+{% endblock dash-content %}

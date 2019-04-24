@@ -1,0 +1,17 @@
+{% extends "accounts/dash_base.html" %}
+
+{% comment %}
+    Context:
+        {
+            user: User object
+        }
+{% endcomment %}
+
+
+
+{% block dash-content %}
+    Welcome {{ user.get_full_name }} <br>
+    {{ user.teacherprofile.get_dept_display }}
+    <br>
+    This is Teacher Dashboard
+{% endblock dash-content %}

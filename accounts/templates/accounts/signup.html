@@ -1,0 +1,33 @@
+{% extends "accounts/base.html" %}
+
+{% comment %}
+    Context Recieved:
+        userform: The UserForm Object
+        teacherform: The TeacherProfileForm Object
+        studform: The StudProfileForm Object
+        is_stud: Boolean
+        request
+{% endcomment %}
+
+
+{% block title %}
+    {% if is_stud %}
+        Student
+    {% else %}
+        Teacher
+    {% endif %}
+    Signup
+{%  endblock title %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ userform.as_p}}
+        {% if is_stud %}
+            {{ studform.as_p }}
+        {% else %}
+            {{ teacherform.as_p }}
+        {% endif %}
+        <input type="submit" value="Sign Up!">
+    </form>
+{% endblock content %}

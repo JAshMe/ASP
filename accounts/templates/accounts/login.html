@@ -1,0 +1,31 @@
+{% extends "accounts/base.html" %}
+
+{% comment %}
+    Context:
+        {
+            form: AuthenticationForm object
+            acc_created: Numeric 1 if created 0 if not
+            logout: Numeric 1 if created 0 if not
+        }
+{% endcomment %}
+
+
+{% block title %} Login {% endblock title %}
+
+
+{% block content %}
+    <div align="center">
+        {% if acc_created %}
+            You account has been successfully created. Please Login to continue. <br>
+        {% endif %}
+
+        {% if logout %}
+            You have been successfully logged out.
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+{% endblock %}

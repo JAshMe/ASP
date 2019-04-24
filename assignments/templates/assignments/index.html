@@ -1,0 +1,17 @@
+{% extends "accounts/base.html" %}
+
+{% block content %}
+    <div align="center">
+        <div align="right">
+            <a href="{% url "accounts:login" %}">Login</a>
+        </div>
+        <h1>Assignment Submission Portal</h1>
+{#        <button>Get Started</button>#}
+        <br><br>
+        <div>
+            <a href="{% url "accounts:stud_signup" %}"><button>Sign Up as Student</button></a>&nbsp;&nbsp;&nbsp;
+            <a href="{% url "accounts:teacher_signup" %}"><button>Sign Up as Teacher</button></a>
+        </div>
+    </div>
+{% endblock %}
+

@@ -124,7 +124,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Media URL
+MEDIA_ROOT = os.path.join(BASE_DIR, "assignments/media")
+MEDIA_URL = 'assignments/media/'
+
 # Custom URLs
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/accounts/dash'
 LOGOUT_REDIRECT_URL = LOGIN_URL
+

@@ -12,4 +12,10 @@
 {% block dash-content %}
     Welcome {{ user.get_full_name }}
     <br>This is Student Dashboard
+    <br><br>
+    <div class="row" align="center">
+        <a href="#"><button>Past Assignments</button></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url "assignments:add-assign" %}"><button>Submit a New Assignment</button></a>
+    </div>
 {% endblock dash-content %}

@@ -8,6 +8,7 @@
 
 {% block content %}
     <div align="right">
+        <a href="{% url "accounts:choose_dash" %}">Back to Dashboard</a>&nbsp;&nbsp;&nbsp;
         <a href="{% url "accounts:logout" %}"><button>Logout</button></a>
     </div>
     {% block dash-content %}

@@ -21,8 +21,8 @@ class Environment(models.Model):
     """
 
     ENVIRONMENT_CHOICES = (
-        ('ap-sp', 'Apache Spark'),
-        ('yn-mp', 'Yarn/Map Reduce'),
+        ('ap_sp', 'Apache Spark'),
+        ('yn_mp', 'Yarn/Map Reduce'),
         ('hb', 'HBase'),
     )
 
@@ -36,7 +36,7 @@ class Environment(models.Model):
     )
 
     bash_file_url = models.FilePathField(
-        path=os.path.join(settings.MEDIA_ROOT, "bash_files"),
+        path=settings.ENV_ROOT,
         recursive=False,
         allow_files=True,
         allow_folders=False,
@@ -58,22 +58,26 @@ class Assignment(models.Model):
     assign_code = models.FileField(
         upload_to=user_directory_path,
         help_text="Upload .zip Files Only",
-        blank=False,
-        validators=[FileExtensionValidator(allowed_extensions=["zip"], message="Only '.zip' files are allowed!!")]
+        blank=True,
+        validators=[FileExtensionValidator(allowed_extensions=["zip"], message="Only '.zip' files are allowed!!")],
     )
     run_command = models.CharField(
         verbose_name="Run Command",
         max_length=500,
-        help_text="Enter the command for running your project"
+        help_text="Enter the command for running your project",
+        blank=False,
     )
     is_eval = models.BooleanField(
         verbose_name="Is Evaluated",
         default=False
     )
 
-    user = models.ForeignKey(verbose_name="Student", to=get_user_model(), on_delete=models.CASCADE)
+    user = models.ForeignKey(verbose_name="Student", to=get_user_model(), on_delete=models.CASCADE, blank=False)
 
-    env = models.ForeignKey(verbose_name="Environment Selected", to=Environment, on_delete=models.CASCADE)
+    env = models.ForeignKey(verbose_name="Environment Selected",
+                            to=Environment,
+                            on_delete=models.CASCADE,
+                            )
 
     def __str__(self):
         return self.title + " - " + self.user.username

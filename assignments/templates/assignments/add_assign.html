@@ -1,0 +1,29 @@
+{% extends "accounts/dash_base.html" %}
+
+{% comment %}
+    context = {
+    form : AssignmentForm
+    }
+{% endcomment %}
+
+{% block title %}
+    Add Assignment
+{% endblock title %}
+
+
+{% block dash-content %}
+
+    <div>
+        <h1 align="center">Add A New Assignment</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br>
+            <label for="sub_t">Submission Time: &nbsp; </label>
+            {% now "d/m/Y H:i:s" %}
+            <br>
+            <input type="submit" value="Submit Assignment">
+        </form>
+    </div>
+
+{% endblock dash-content %}

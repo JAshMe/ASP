@@ -9,9 +9,12 @@ urlpatterns = [
     path('success', AssignSuccessView.as_view(), name="assign-success"),
     path('env/select', EnvSelectView.as_view(), name="env-select"),
 
-    path('eval/<pk>', AssignDetailView.as_view(), name='assign_detail'),
+    path('eval/<pk>', AssignDetailView.as_view(), name='assign-detail'),
 
-    path('eval', AssignSelectView.as_view(), name="assign-select")
+    path('start-eval/<pk>', EvalAssignView.as_view(),
+         name='assign-eval'),
+
+    path('eval', AssignSelectView.as_view(), name="assign-select"),
 
 ]
 

@@ -4,9 +4,11 @@ from django.views.generic import TemplateView, CreateView, FormView, DetailView
 from .models import Assignment, Environment
 from django.http.response import FileResponse
 from .forms import AssignmentForm, EnvSelectForm, AssignSelectForm
-import time, math, random
+import time, math, random, subprocess
 import hashlib
+from .portscanner import get_free_port
 from accounts.mixins import *
+from django.http import HttpResponse
 
 
 class IndexView(TemplateView):
@@ -123,10 +125,10 @@ class AssignSelectView(TeacherLoginRequiredMixin, FormView):
 
         self.request.session['curr_assign'] = form.cleaned_data['assign_id']
 
-        return redirect(reverse("assignments:assign_detail", kwargs={'pk': form.cleaned_data['assign_id']}))
+        return redirect(reverse("assignments:assign-detail", kwargs={'pk': form.cleaned_data['assign_id']}))
 
 
-class AssignDetailView(DetailView):
+class AssignDetailView(TeacherLoginRequiredMixin, DetailView):
 
     """
     View to define details of an Assignment
@@ -135,6 +137,40 @@ class AssignDetailView(DetailView):
     model = Assignment
     template_name = "assignments/assign_eval.html"
     context_object_name = "assign"
+
+# ---------Following View Will be used for Evaluation of the Uploaded Assignment------------
+
+
+class EvalAssignView(TeacherLoginRequiredMixin, View):
+    """
+    View to Evaluate the Assignment
+    """
+
+    def get(self, request, pk):
+        """
+        :param request: HTTPRequest
+        :param pk: Primary Key of the Assignment
+        :return: HTTPResponse
+        """
+
+        self.create_vm()
+        return HttpResponse("Evaluated")
+
+    def create_vm(self):
+        """
+        This method will create the VM for that using Vagrant Script
+        :return: None
+        """
+
+        # getting required parameters for the script
+        username = self.request.user.username
+        free_port = get_free_port()
+
+        print(username + " " + str(free_port))
+
+
+
+
 
 
 

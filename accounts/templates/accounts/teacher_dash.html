@@ -13,5 +13,11 @@
     Welcome {{ user.get_full_name }} <br>
     {{ user.teacherprofile.get_dept_display }}
     <br>
-    This is Teacher Dashboard
+    <div class="row" align="center">
+        <a href="#"><button>Past Evaluated Assignments</button></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url "assignments:assign-select" %}"><button>Evaluate New Assignment</button></a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="{% url "assignments:env-select" %}"><button>Download Environment</button></a>
+    </div>
 {% endblock dash-content %}

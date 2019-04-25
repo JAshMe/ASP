@@ -2,19 +2,19 @@
 
 {% comment %}
     context = {
-        assign: Assignment which is uploaded
+        assign: Assignment Object which is passed
     }
 {% endcomment %}
 
 {% block title %}
-     Success
+     Evaluate
 {% endblock title %}
 
 
 {% block dash-content %}
 
     <div align="center">
-        <h1>Assignment Uploaded Successfully</h1>
+        <h1>Evaluation of Assignment</h1>
         <table>
             <tr style="font-size: x-large">
                 <th>Assignment ID:</th>
@@ -48,6 +48,8 @@
             </tr>
 
         </table>
+
+        <a><button>Evaluate!</button></a>
     </div>
 
 {% endblock dash-content %}

@@ -126,7 +126,6 @@ STATIC_URL = '/static/'
 
 # Media URL
 MEDIA_ROOT = os.path.join(BASE_DIR, "assignments\\media")
-print(MEDIA_ROOT)
 MEDIA_URL = 'assignments/media/'
 
 # Custom URLs

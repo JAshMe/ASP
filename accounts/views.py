@@ -7,6 +7,7 @@ from django.contrib.auth.views import LoginView, TemplateView, LogoutView
 from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 from django.views.generic import FormView
 from pprint import pprint as pp
+from .mixins import *
 from .forms import *
 from .models import *
 
@@ -194,16 +195,9 @@ class ChooseDashboardView(LoginRequiredMixin, View):
             return redirect(to=reverse("accounts:teacher_dash"))
 
 
-class DashboardView(LoginRequiredMixin, UserPassesTestMixin, TemplateView):
+class DashboardView(TemplateView):
 
     template_name = "accounts/login.html"
-
-    @abc.abstractmethod
-    def test_func(self):
-        """
-        This method will test if the user passes a particular test or not, if yes then he/she will be allowed in view
-        :return: Boolean
-        """
 
     def get_context_data(self, **kwargs):
         """
@@ -217,7 +211,7 @@ class DashboardView(LoginRequiredMixin, UserPassesTestMixin, TemplateView):
         return context_data
 
 
-class StudDashboardView(DashboardView):
+class StudDashboardView(StudLoginRequiredMixin, DashboardView):
     """
         This is Student Dashboard View
     """
@@ -228,7 +222,7 @@ class StudDashboardView(DashboardView):
         return self.request.session['is_stud']
 
 
-class TeacherDashboardView(DashboardView):
+class TeacherDashboardView(TeacherLoginRequiredMixin, DashboardView):
     """
     This is the Teacher's Dashboard View
     """

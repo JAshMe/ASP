@@ -9,6 +9,7 @@ import hashlib
 from .portscanner import get_free_port
 from accounts.mixins import *
 from django.http import HttpResponse
+from ASP import settings
 
 
 class IndexView(TemplateView):
@@ -153,20 +154,47 @@ class EvalAssignView(TeacherLoginRequiredMixin, View):
         :return: HTTPResponse
         """
 
-        self.create_vm()
-        return HttpResponse("Evaluated")
+        ass = Assignment.objects.get(pk=pk)
+        free_port = self.create_vm()
+        self.deploy_stud_code(ass)
+
+        web_shell_url = "http://localhost:" + free_port + "/"
+        return redirect(to=web_shell_url)
 
     def create_vm(self):
         """
         This method will create the VM for that using Vagrant Script
-        :return: None
+        :return: Port at which the Web Shell is running on VM
         """
 
         # getting required parameters for the script
         username = self.request.user.username
         free_port = get_free_port()
 
-        print(username + " " + str(free_port))
+        # running shell script with above parameters
+
+        print("VM Created..")
+        return free_port
+
+    def deploy_stud_code(self, ass):
+        """
+        This method will deploy the student code in above created VM
+        :return: None
+        """
+
+        # getting required parameters
+        env_name = ass.env.env_id
+        code_url = "http://localhost/" + ass.assign_code.url()
+        run_command = ass.run_command
+        username = self.request.user.username
+
+        # getting the script
+        script_url = ass.env.bash_file_url
+
+        # pass these parameters to above bash script and run it
+
+
+
 
 
 

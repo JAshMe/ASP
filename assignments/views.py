@@ -14,7 +14,7 @@ class CreateAssignmentView(CreateView):
     """
     form_class = AssignmentForm
     template_name = "assignments/add_assign.html"
-    success_url = reverse("assignments:assign-success")
+    success_url = 'assign_success'
 
     def form_valid(self, form):
         """

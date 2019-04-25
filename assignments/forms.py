@@ -10,8 +10,3 @@ class AssignmentForm(ModelForm):
     class Meta:
         model = Assignment
         fields = ['title', 'desc', 'env', 'assign_code', 'run_command', ]
-        widgets = {
-            'submission_time': DateTimeInput(attrs={
-                'disabled': True
-            })
-        }

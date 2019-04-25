@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="484cc234-88a3-4038-8a23-d0493046b7a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignments/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignments/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignments/static/attendance/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/static/assignments/css/base.css" afterDir="false" />
+    <list default="true" id="484cc234-88a3-4038-8a23-d0493046b7a0" name="Default Changelist" comment="Assignments Models Completed">
+      <change beforePath="$PROJECT_DIR$/assignments/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,10 +17,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/accounts/models.py">
+        <entry file="file://$PROJECT_DIR$/assignments/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="1513">
+              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -31,12 +29,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assignments/models.py">
+        <entry file="file://$PROJECT_DIR$/assignments/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="17">
+              <caret line="1" column="57" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assignments/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,8 +96,6 @@
         <option value="$PROJECT_DIR$/accounts/startup.py" />
         <option value="$PROJECT_DIR$/assignments/templates/assignments/base.html" />
         <option value="$PROJECT_DIR$/assignments/static/attendance/css/base.css" />
-        <option value="$PROJECT_DIR$/assignments/views.py" />
-        <option value="$PROJECT_DIR$/assignments/urls.py" />
         <option value="$PROJECT_DIR$/ASP/urls.py" />
         <option value="$PROJECT_DIR$/assignments/templates/assignments/index.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/stud_signup.html" />
@@ -108,6 +116,8 @@
         <option value="$PROJECT_DIR$/ASP/settings.py" />
         <option value="$PROJECT_DIR$/assignments/admin.py" />
         <option value="$PROJECT_DIR$/assignments/models.py" />
+        <option value="$PROJECT_DIR$/assignments/urls.py" />
+        <option value="$PROJECT_DIR$/assignments/views.py" />
       </list>
     </option>
   </component>
@@ -145,12 +155,6 @@
               <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
               <item name="ASP" type="462c0819:PsiDirectoryNode" />
               <item name="assignments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASP" type="462c0819:PsiDirectoryNode" />
-              <item name="assignments" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -225,7 +229,7 @@
       <option name="presentableId" value="Default" />
       <updated>1555794482363</updated>
       <workItem from="1555794491205" duration="30711000" />
-      <workItem from="1556094611468" duration="35118000" />
+      <workItem from="1556094611468" duration="35614000" />
     </task>
     <task id="LOCAL-00001" summary="Assignment Models Created">
       <created>1556145739883</created>
@@ -234,17 +238,23 @@
       <option name="project" value="LOCAL" />
       <updated>1556145739883</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Assignments Models Completed">
+      <created>1556152237655</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556152237655</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65829000" />
+    <option name="totallyTimeSpent" value="66325000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -258,7 +268,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.26022914" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.26022914" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -272,7 +282,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Assignment Models Created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assignment Models Created" />
+    <MESSAGE value="Assignments Models Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignments Models Completed" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/accounts/__init__.py">
@@ -312,32 +323,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ASP/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
           <folding>
             <element signature="e#627#659#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -450,16 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignments/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -470,12 +451,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/models.py">
+    <entry file="file://$PROJECT_DIR$/accounts/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="1139">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="57" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

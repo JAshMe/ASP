@@ -1,0 +1,45 @@
+VM_NAME = "96001"
+VM_SHELL_PORT = 40983
+VAGRANT_BOX = "ubuntu/xenial64"
+
+VM_USER = 'vagrant'
+
+VM_MEMORY = 2048
+
+Vagrant.configure("2") do |config|
+
+	config.vm.box = VAGRANT_BOX
+
+	config.vm.hostname = VM_NAME
+
+	config.vm.provider "virtualbox" do |v|
+    	v.name = VM_NAME
+    	v.memory = VM_MEMORY
+  	end
+
+  	config.vm.network "forwarded_port", guest: 8080, host: VM_SHELL_PORT
+
+  	config.vm.provision "file", source: "../../env/spark-cluster-start.sh", destination: "~/spark-cluster-start.sh"
+  	config.vm.provision "file", source: "../../env/spark-cluster-stop.sh", destination: "~/spark-cluster-stop.sh"
+    config.vm.provision "file", source: "../../env/start-vm-up-trigger.sh", destination: "~/start-vm-up-trigger.sh"
+
+  	config.vm.provision "shell", inline: <<-SHELL
+  		sudo apt-get update -y
+  		sudo add-apt-repository \
+   			"deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   			$(lsb_release -cs) \
+   			stable"
+   		sudo apt-get update -y
+   		sudo apt-get install -y --allow-unauthenticated docker-ce docker-ce-cli containerd.io unzip
+   		wget https://dl.google.com/go/go1.12.2.linux-amd64.tar.gz
+   		sudo tar -xvf go1.12.2.linux-amd64.tar.gz
+   		rm -rf go1.12.2.linux-amd64.tar.gz
+   		sudo mv go /usr/local
+   	SHELL
+
+    config.trigger.after :up do |trigger|
+      trigger.info = "Starting Virtual Machine"
+      trigger.run = {inline: "vagrant ssh -c ~/start-vm-up-trigger.sh"}
+    end
+
+end

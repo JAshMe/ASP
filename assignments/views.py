@@ -1,7 +1,7 @@
 from django.shortcuts import render,reverse, redirect
 from django.views import View
 from django.views.generic import TemplateView, CreateView, FormView, DetailView
-from .models import Assignment, Environment
+from .models import Assignment, Environment, VM
 from django.http.response import FileResponse
 from .forms import AssignmentForm, EnvSelectForm, AssignSelectForm
 import time, math, random, subprocess
@@ -156,9 +156,10 @@ class EvalAssignView(TeacherLoginRequiredMixin, View):
 
         ass = Assignment.objects.get(pk=pk)
         free_port = self.create_vm()
+
         self.deploy_stud_code(ass)
 
-        web_shell_url = "http://localhost:" + free_port + "/"
+        web_shell_url = "http://127.0.0.1:" + str(free_port) + "/"
         return redirect(to=web_shell_url)
 
     def create_vm(self):
@@ -169,11 +170,19 @@ class EvalAssignView(TeacherLoginRequiredMixin, View):
 
         # getting required parameters for the script
         username = self.request.user.username
-        free_port = get_free_port()
+        free_port = str(self.get_port())
+
+        cmd = "assignments/env/start-vm.sh -u %s -p %s" % (username, free_port)
+        print("Running " + cmd + "....")
 
         # running shell script with above parameters
+        subprocess.call(["cd assignments & pwd & " + cmd], shell=True)
 
         print("VM Created..")
+
+        # inserting the new vm in the database
+        self.store_new_vm(free_port)
+
         return free_port
 
     def deploy_stud_code(self, ass):
@@ -184,14 +193,60 @@ class EvalAssignView(TeacherLoginRequiredMixin, View):
 
         # getting required parameters
         env_name = ass.env.env_id
-        code_url = "http://localhost/" + ass.assign_code.url()
+        code_url = "http://127.0.0.1:8000/" + ass.assign_code.url
+
+        code_url = "https://github.com/Abhey/SparkTestApp/archive/master.zip"
+
         run_command = ass.run_command
+
+        run_command = "/spark/bin/spark-submit /code/SparkTestApp-master/SparkApp.py"
         username = self.request.user.username
 
         # getting the script
         script_url = ass.env.bash_file_url
 
+        cmd = "%s -u %s -l %s -c \"%s\" -e %s" % (script_url, username, code_url, run_command, env_name)
+
+        print("Running " + cmd + "....")
+
         # pass these parameters to above bash script and run it
+        subprocess.call([cmd], shell=True)
+
+    def get_port(self):
+        """
+        This method is used for getting port for the VM
+        :return: Integer: Port
+        """
+
+        teacher = self.request.user
+
+        try:
+            # try to fetch port from existing model for the teacher
+            vm = VM.objects.get(pk=teacher)
+            return vm.port_used
+
+        except VM.DoesNotExist:
+            return get_free_port()  # else get a free port for that teacher
+
+    def store_new_vm(self, port):
+        """
+        THis method will store new VM spawned, for that teacher
+        :param port: THe port at which VM is running
+        :return: None
+        """
+
+        new_vm = VM(self.request.user.username, port)
+
+        print(self.request.user)
+
+        new_vm.save()
+
+        print("New VM inserted in the Database..")
+
+        return
+
+
+
 
 
 

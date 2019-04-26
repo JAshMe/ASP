@@ -110,6 +110,24 @@ class Assignment(models.Model):
         return self.title + " - " + self.user.username
 
 
+class VM(models.Model):
+    """
+    This model will store the info of VM spawned for each user
+    """
+
+    teacher = models.OneToOneField(verbose_name="Teacher",
+                                   to=get_user_model(),
+                                   on_delete=models.CASCADE,
+                                   primary_key=True
+                                   )
+
+    port_used = models.IntegerField(
+        verbose_name="Port Used",
+    )
+
+    def __str__(self):
+        return self.teacher.get_full_name() + ": " + str(self.port_used)
+
 
 
 

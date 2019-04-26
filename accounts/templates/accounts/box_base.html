@@ -1,0 +1,21 @@
+{% extends "accounts/base.html" %}
+
+{#For creating a template with central box#}
+{#Generally for Login and SignUp#}
+
+{% block content %}
+
+    <!-- Central Box -->
+    <div align="center">
+        <h2>
+            {% block box-head %}{% endblock box-head %}
+        </h2>
+        <div>
+            {% block box-content %}
+            {% endblock box-content %}
+        </div>
+
+    </div>
+
+{% endblock content %}
+

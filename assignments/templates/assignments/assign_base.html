@@ -1,0 +1,12 @@
+{% extends "accounts/logged_in_base.html" %}
+
+
+{% block logged-in-content %}
+
+    <div align="center">
+        <h2>{% block assign-content-head %}{% endblock assign-content-head %}</h2>
+
+        {% block assign-content %}{% endblock assign-content %}
+    </div>
+
+{% endblock %}

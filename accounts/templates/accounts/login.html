@@ -1,4 +1,4 @@
-{% extends "accounts/base.html" %}
+{% extends "accounts/box_base.html" %}
 
 {% comment %}
     Context:
@@ -12,9 +12,10 @@
 
 {% block title %} Login {% endblock title %}
 
+{% block box-head %}Login {% endblock box-head %}
 
-{% block content %}
-    <div align="center">
+{% block box-content %}
+
         {% if acc_created %}
             You account has been successfully created. Please Login to continue. <br>
         {% endif %}
@@ -27,5 +28,5 @@
             {{ form.as_p }}
             <input type="submit" value="Submit">
         </form>
-    </div>
-{% endblock %}
+
+{% endblock box-content %}

@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
+{% comment %}
+Template Heirarchy:
+------------------
+                 base
+            /            \
+           /              \
+ logged_in_base         box_base
+     /    \              /   \
+    /      \            /     \
+  dash_base past_base  login  signup
+     /   \
+    /     \
+stud_dash teacher_dash
+
+
+{% endcomment %}
+
 <head>
     <meta charset="UTF-8">
     <title>{% block title %} MNNIT Allahabad {% endblock title %} | Assignment Submission</title>
 
     <!-- Vendor Stylesheets -->
+        <!-- BS 4 -->
 
     <!-- External Stylesheets -->
-    {% block ext_style %}
+
+    {% block ext-style %}
 
 
-    {% endblock ext_style %}
+    {% endblock ext-style %}
+
 
 </head>
 <body>
@@ -19,13 +40,17 @@
 </body>
 
 <!----  Vendor Scripts -->
+    <!-- jQuery -->
+
+    <!-- BS4 -->
 
 <!---- External Scripts -->
-{% block ext_scripts %}
 
-{% endblock ext_scripts %}
+{% block ext-scripts %}
+
+{% endblock ext-scripts %}
 
 <!--- Internal Scripts -->
-{% block int_scripts %}{% endblock int_scripts %}
+{% block int-scripts %}{% endblock int-scripts %}
 
 </html>

@@ -1,4 +1,4 @@
-{% extends "accounts/dash_base.html" %}
+{% extends "assignments/assign_base.html" %}
 
 {% comment %}
     context = {
@@ -10,11 +10,10 @@
     Add Assignment
 {% endblock title %}
 
+{% block assign-content-head %}Add A New Assignment{% endblock assign-content-head %}
 
-{% block dash-content %}
+{% block assign-content %}
 
-    <div>
-        <h1 align="center">Add A New Assignment</h1>
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
@@ -24,6 +23,5 @@
             <br>
             <input type="submit" value="Submit Assignment">
         </form>
-    </div>
 
-{% endblock dash-content %}
+{% endblock assign-content %}

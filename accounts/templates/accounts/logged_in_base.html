@@ -1,0 +1,24 @@
+{% extends "accounts/base.html" %}
+
+{# Base template for Logged In User #}
+
+
+{% comment %}
+    Context:
+    {
+        user: User object of logged in user
+    }
+{% endcomment %}
+
+
+
+{% block content %}
+
+    <!-- Nav Bar -->
+    <div align="right">
+        <a href="{% url "accounts:choose_dash" %}">Back to Dashboard</a>&nbsp;&nbsp;&nbsp;
+        <a href="{% url "accounts:logout" %}"><button>Logout</button></a>
+    </div>
+
+    {% block logged-in-content %}{% endblock logged-in-content %}
+{% endblock %}

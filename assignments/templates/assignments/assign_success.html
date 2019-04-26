@@ -1,4 +1,4 @@
-{% extends "accounts/dash_base.html" %}
+{% extends "assignments/assign_base.html" %}
 
 {% comment %}
     context = {
@@ -11,43 +11,9 @@
 {% endblock title %}
 
 
-{% block dash-content %}
+{% block assign-content-head %}Assignment Uploaded Successfully{% endblock assign-content-head %}
 
-    <div align="center">
-        <h1>Assignment Uploaded Successfully</h1>
-        <table>
-            <tr style="font-size: x-large">
-                <th>Assignment ID:</th>
-                <td>{{ assign.assign_id }}</td>
-            </tr>
-            <tr>
-                <th>Selected Environment:</th>
-                <td>{{ assign.env.get_env_id_display }}</td>
-            </tr>
-            <tr>
-                <th>Name:</th>
-                <td>{{ assign.title }}</td>
-            </tr>
-            {% if assign.desc != '' %}
-                <tr>
-                    <th>Description:</th>
-                    <td>{{ assign.desc }}</td>
-                </tr>
-            {% endif %}
-            <tr>
-                <th>Submission Time:</th>
-                <td>{{ assign.submission_time|date:"d/m/Y H:i:s" }}</td>
-            </tr>
-            <tr>
-                <th>Run Command:</th>
-                <td><code>{{ assign.run_command }}</code></td>
-            </tr>
-            <tr>
-                <th>Status:</th>
-                <td>Submitted For Evaluation</td>
-            </tr>
 
-        </table>
-    </div>
-
-{% endblock dash-content %}
+{% block assign-content %}
+    {% include "assignments/assign_detail.html" %}
+{% endblock assign-content %}

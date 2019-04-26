@@ -1,4 +1,4 @@
-{% extends "accounts/base.html" %}
+{% extends "accounts/box_base.html" %}
 
 {% comment %}
     Context Recieved:
@@ -11,15 +11,14 @@
 
 
 {% block title %}
-    {% if is_stud %}
-        Student
-    {% else %}
-        Teacher
-    {% endif %}
-    Signup
+    {% if is_stud %} Student {% else %} Teacher {% endif %} Signup
 {%  endblock title %}
 
-{% block content %}
+{% block box-head %}
+    {% if is_stud %} Student {% else %} Teacher {% endif %} Signup
+{% endblock %}
+
+{% block box-content %}
     <form method="post">
         {% csrf_token %}
         {{ userform.as_p}}
@@ -30,4 +29,4 @@
         {% endif %}
         <input type="submit" value="Sign Up!">
     </form>
-{% endblock content %}
+{% endblock box-content %}

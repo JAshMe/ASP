@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="484cc234-88a3-4038-8a23-d0493046b7a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignments/env/hadoop-cluster-start.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignments/env/hadoop-cluster-stop.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/static/accounts/css/logged_in_base.css" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/static/accounts/css/logged_in_base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/env/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/env/Vagrantfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/env/start-delpoyment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/env/start-delpoyment.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +49,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="14" column="81" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
+                <state relative-caret-position="239">
+                  <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -65,7 +70,11 @@
           </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/accounts/static/accounts/css/logged_in_base.css">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="1" selection-start-line="1" selection-end-line="1" />
+                </state>
+              </provider>
             </entry>
           </file>
         </leaf>
@@ -137,6 +146,7 @@
         <option value="$PROJECT_DIR$/accounts/templates/accounts/login.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/box_base.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html" />
+        <option value="$PROJECT_DIR$/accounts/static/accounts/css/logged_in_base.css" />
       </list>
     </option>
   </component>
@@ -159,45 +169,6 @@
             <path>
               <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
               <item name="ASP" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASP" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASP" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASP" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASP" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASP" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASP" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
@@ -339,7 +310,7 @@
       <updated>1555794482363</updated>
       <workItem from="1555794491205" duration="30711000" />
       <workItem from="1556094611468" duration="77866000" />
-      <workItem from="1556285097003" duration="45182000" />
+      <workItem from="1556285097003" duration="45658000" />
     </task>
     <task id="LOCAL-00001" summary="Assignment Models Created">
       <created>1556145739883</created>
@@ -394,7 +365,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171427000" />
+    <option name="totallyTimeSpent" value="171903000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="6" />
@@ -780,13 +751,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/static/accounts/css/logged_in_base.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="81" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
+        <state relative-caret-position="239">
+          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/static/accounts/css/logged_in_base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>

@@ -17,6 +17,8 @@ Vagrant.configure("2") do |config|
 
   	config.vm.network "forwarded_port", guest: 8080, host: VM_SHELL_PORT
 
+    config.vm.provision "file", source: "../../env/hadoop-cluster-start.sh", destination: "~/hadoop-cluster-start.sh"
+    config.vm.provision "file", source: "../../env/hadoop-cluster-stop.sh", destination: "~/hadoop-cluster-stop.sh"
   	config.vm.provision "file", source: "../../env/spark-cluster-start.sh", destination: "~/spark-cluster-start.sh"
   	config.vm.provision "file", source: "../../env/spark-cluster-stop.sh", destination: "~/spark-cluster-stop.sh"
     config.vm.provision "file", source: "../../env/start-vm-up-trigger.sh", destination: "~/start-vm-up-trigger.sh"

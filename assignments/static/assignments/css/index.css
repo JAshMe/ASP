@@ -1,0 +1,59 @@
+body {
+    background: url("/static/ASP/img/png/main_back.png") no-repeat;
+    background-size: 100vw 120vh;
+}
+
+#nav-header{
+    padding-top: 3%;
+}
+
+#nav-header button{
+    font-size: 1.1em;
+}
+#nav-header button:hover{
+    font-size: 1.1em;
+    color: #0093f8;
+}
+
+#nav-header button:active{
+    font-size: 1.1em;
+    color: #0093f8;
+}
+
+
+#main-head{
+    color: white;
+    position: absolute;
+    text-transform: uppercase;
+    top: 35vh;
+    left: 8vw
+}
+
+#inst-head{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 0.3em;
+}
+
+.hr{
+    border: 1px solid white;
+}
+
+#project-head{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+}
+
+#get-started-div {
+    padding-top: 4%;
+}
+
+#get-started-div button{
+    font-size: 1.2em;
+    line-height: 0.8em;
+}
+.glyph{
+    font-size: 1.4em;
+}

@@ -4,8 +4,20 @@ This module will consist of all the Forms used in Accounts App
 
 from django.forms import *
 from .models import *
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth import get_user_model
+from .form_funcs import *
+
+
+class LoginForm(AuthenticationForm):
+    """
+    Form for login
+    """
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        update_all_inputs(self.fields, 'class', 'form-control')
 
 
 class UserForm(UserCreationForm):
@@ -17,6 +29,16 @@ class UserForm(UserCreationForm):
         model = get_user_model()
         fields = ['username', 'first_name', 'last_name', 'password1', 'password2', 'email']
 
+    def __init__(self, *args, **kwargs):
+        """
+        To customize the widgets
+        """
+        super().__init__(*args, **kwargs)
+
+        update_all_inputs(self.fields, 'class', 'form-control')
+
+        update_attr(self.fields['username'], 'class', 'form-control form-control-lg')
+
 
 class StudProfileForm(ModelForm):
     """
@@ -27,6 +49,14 @@ class StudProfileForm(ModelForm):
         model = StudentProfile
         fields = ['prog', 'bra', 'sem']
 
+    def __init__(self, *args, **kwargs):
+        """
+        To customize widgets
+        """
+        super().__init__(*args, **kwargs)
+
+        update_all_inputs(self.fields, 'class', 'form-control')
+
 
 class TeacherProfileForm(ModelForm):
     """
@@ -36,6 +66,16 @@ class TeacherProfileForm(ModelForm):
     class Meta:
         model = TeacherProfile
         fields = ['bio', 'dept']
+
+    def __init__(self, *args, **kwargs):
+        """
+        To customize widgets
+        """
+        super().__init__(*args, **kwargs)
+
+        update_all_inputs(self.fields, 'class', 'form-control')
+        update_attr(self.fields['bio'], 'cols', 10)
+        update_attr(self.fields['bio'], 'rows', 3)
 
 
 

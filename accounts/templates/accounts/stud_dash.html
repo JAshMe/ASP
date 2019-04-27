@@ -3,21 +3,14 @@
 {% comment %}
     Context:
         {
-            user: User object
+            user: User object whose dashboard to be shown
         }
 {% endcomment %}
 
+{% block href1 %}#{% endblock href1 %}
+{% block btn1 %}View Past Assignments{% endblock btn1 %}
 
+{% block href2 %}{% url "assignments:add-assign" %}{% endblock href2 %}
+{% block btn2 %}Submit a New Assignment{% endblock btn2 %}
 
-{% block dash-content %}
-    Welcome {{ user.get_full_name }}
-    <br>This is Student Dashboard
-    <br><br>
-    <div class="row" align="center">
-        <a href="#"><button>Past Assignments</button></a>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="{% url "assignments:add-assign" %}"><button>Submit a New Assignment</button></a>
-        &nbsp;&nbsp;&nbsp;
-        <a href="{% url "assignments:env-select" %}"><button>Download Environment</button></a>
-    </div>
-{% endblock dash-content %}
+{% block dash-content %}{% endblock %}

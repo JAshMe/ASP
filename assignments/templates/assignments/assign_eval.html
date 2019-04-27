@@ -1,4 +1,4 @@
-{% extends "accounts/dash_base.html" %}
+{% extends "assignments/assign_base.html" %}
 
 {% comment %}
     context = {
@@ -6,50 +6,15 @@
     }
 {% endcomment %}
 
-{% block title %}
-     Evaluate
-{% endblock title %}
+{% block title %}Evaluate{% endblock title %}
+
+{% block assign-content-head %}Evaluation of Assignment{% endblock assign-content-head %}
 
 
-{% block dash-content %}
+{% block assign-content %}
 
-    <div align="center">
-        <h1>Evaluation of Assignment</h1>
-        <table>
-            <tr style="font-size: x-large">
-                <th>Assignment ID:</th>
-                <td>{{ assign.assign_id }}</td>
-            </tr>
-            <tr>
-                <th>Selected Environment:</th>
-                <td>{{ assign.env.get_env_id_display }}</td>
-            </tr>
-            <tr>
-                <th>Name:</th>
-                <td>{{ assign.title }}</td>
-            </tr>
-            {% if assign.desc != '' %}
-                <tr>
-                    <th>Description:</th>
-                    <td>{{ assign.desc }}</td>
-                </tr>
-            {% endif %}
-            <tr>
-                <th>Submission Time:</th>
-                <td>{{ assign.submission_time|date:"d/m/Y H:i:s" }}</td>
-            </tr>
-            <tr>
-                <th>Run Command:</th>
-                <td><code>{{ assign.run_command }}</code></td>
-            </tr>
-            <tr>
-                <th>Status:</th>
-                <td>Submitted For Evaluation</td>
-            </tr>
+    {% include "assignments/assign_detail.html" %}
 
-        </table>
+    <a href="{% url "assignments:assign-eval" assign.pk %}"><button>Evaluate!</button></a>
 
-        <a href="{% url "assignments:assign-eval" assign.pk %}"><button>Evaluate!</button></a>
-    </div>
-
-{% endblock dash-content %}
+{% endblock assign-content %}

@@ -1,0 +1,46 @@
+.notif{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    background-color: var(--success);
+    color: white;
+    height: 50px;
+    text-align: center;
+    padding-top: 12px;
+     z-index: 30;
+}
+
+.cross{
+    font-size: 1.5em;
+    position: absolute;
+    top:8px;
+    right:15px;
+    cursor: pointer;
+
+
+}
+
+.central-box{
+    position: relative;
+    z-index: 20;
+}
+
+.upside-div{
+    position: fixed;
+    left: -1px;
+    top: 30vh;
+    z-index: 30;
+}
+
+.upside-btn{
+    width: 40px;
+    height: 40vh;
+}
+
+.upside-span{
+    display: block;
+    transform: rotateZ(90deg);
+    font-size: 1.5em;
+    margin-top: -19vh;
+}

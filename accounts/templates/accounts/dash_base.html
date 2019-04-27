@@ -1,4 +1,12 @@
-{% extends "accounts/base.html" %}
+{% extends "accounts/logged_in_base.html" %}
+
+{% comment %}
+    Context:
+        {
+            user: User object whose dashboard to be shown
+        }
+{% endcomment %}
+
 
 {% block title %}
     Dashboard
@@ -6,12 +14,31 @@
 
 
 
-{% block content %}
-    <div align="right">
-        <a href="{% url "accounts:choose_dash" %}">Back to Dashboard</a>&nbsp;&nbsp;&nbsp;
-        <a href="{% url "accounts:logout" %}"><button>Logout</button></a>
+{% block logged-in-content %}
+
+
+
+    <!-- Button Row -->
+    <div class="row" align="center">
+        <a href="{% block href1 %}{% endblock href1 %}">
+            <button>{% block btn1 %}{% endblock btn1 %}</button>
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% block href2 %}{% endblock href2 %}">
+            <button>{% block btn2 %}{% endblock btn2 %}</button>
+        </a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="{% url "assignments:env-select" %}">
+            <button>Download Environment</button>
+        </a>
     </div>
+
+
+    {# Extra Content to Put #}
     {% block dash-content %}
 
     {% endblock dash-content %}
-{% endblock %}
+
+
+
+{% endblock logged-in-content %}

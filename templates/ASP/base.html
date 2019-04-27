@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% comment %}
+Template Heirarchy:
+------------------
+                 base
+            /            \
+           /              \
+ logged_in_base         box_base
+     /    \              /   \
+    /      \            /     \
+  dash_base past_base  login  signup
+     /   \
+    /     \
+stud_dash teacher_dash
+
+
+{% endcomment %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} MNNIT Allahabad {% endblock title %} | Assignment Submission</title>
+
+    {% load staticfiles %}
+    <!-- Vendor Stylesheets -->
+        <!-- BS 4 -->
+    <link rel="stylesheet" href="{% static "ASP/vendor/bs4/css/bootstrap.min.css" %}">
+        <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static "ASP/vendor/fa/css/all.css" %}">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700|Quicksand|Raleway|Roboto:900" rel="stylesheet">
+
+{#    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">#}
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="{% static "ASP/css/base.css" %}">
+
+    {% block ext-style %}{% endblock ext-style %}
+
+
+</head>
+<body>
+    <div class="container-fluid page-bg">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+</body>
+
+<!----  Vendor Scripts -->
+    <!-- jQuery and popper.js -->
+<script type="text/javascript" src="{% static "ASP/js/jquery-3.4.0.js" %}"></script>
+<script type="text/javascript" src="{% static "ASP/js/popper.min.js" %}"></script>
+
+<!-- BS4 -->
+<script type="text/javascript" src="{% static "ASP/vendor/bs4/js/bootstrap.min.js" %}"></script>
+<!-- Font Awesome -->
+<script type="text/javascript" src="{% static "ASP/vendor/fa/js/all.js" %}"></script>
+
+<!---- External Scripts -->
+
+{% block ext-scripts %}{% endblock ext-scripts %}
+
+<!--- Internal Scripts -->
+{% block int-scripts %}{% endblock int-scripts %}
+
+</html>

@@ -7,17 +7,11 @@
         }
 {% endcomment %}
 
+{% block href1 %}#{% endblock href1 %}
+{% block btn1 %}Past Evaluated Assignments{% endblock btn1 %}
+
+{% block href2 %}{% url "assignments:assign-select" %}{% endblock href2 %}
+{% block btn2 %}Evaluate New Assignment{% endblock btn2 %}
 
 
-{% block dash-content %}
-    Welcome {{ user.get_full_name }} <br>
-    {{ user.teacherprofile.get_dept_display }}
-    <br>
-    <div class="row" align="center">
-        <a href="#"><button>Past Evaluated Assignments</button></a>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="{% url "assignments:assign-select" %}"><button>Evaluate New Assignment</button></a>
-        &nbsp;&nbsp;&nbsp;
-        <a href="{% url "assignments:env-select" %}"><button>Download Environment</button></a>
-    </div>
-{% endblock dash-content %}
+{% block dash-content %}{% endblock dash-content %}

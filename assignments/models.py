@@ -39,7 +39,7 @@ class Environment(models.Model):
 
     ENVIRONMENT_CHOICES = (
         ('ap_sp', 'Apache Spark'),
-        ('yn_mp', 'Yarn/Map Reduce'),
+        ('ap_hp', 'Apache Hadoop'),
         ('hb', 'HBase'),
     )
 

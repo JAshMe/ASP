@@ -1,0 +1,42 @@
+{% comment %}
+
+        Context={
+            assign : Assignment Object
+        }
+
+{%  endcomment %}
+
+
+<table>
+    <tr style="font-size: x-large">
+        <th>Assignment ID:</th>
+        <td>{{ assign.assign_id }}</td>
+    </tr>
+    <tr>
+        <th>Selected Environment:</th>
+        <td>{{ assign.env.get_env_id_display }}</td>
+    </tr>
+    <tr>
+        <th>Name:</th>
+        <td>{{ assign.title }}</td>
+    </tr>
+    {% if assign.desc != '' %}
+        <tr>
+            <th>Description:</th>
+            <td>{{ assign.desc }}</td>
+        </tr>
+    {% endif %}
+    <tr>
+        <th>Submission Time:</th>
+        <td>{{ assign.submission_time|date:"d/m/Y H:i:s" }}</td>
+    </tr>
+    <tr>
+        <th>Run Command:</th>
+        <td><code>{{ assign.run_command }}</code></td>
+    </tr>
+    <tr>
+        <th>Status:</th>
+        <td>Submitted For Evaluation</td>
+    </tr>
+
+</table>

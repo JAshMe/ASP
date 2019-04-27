@@ -1,4 +1,4 @@
-{% extends "accounts/dash_base.html" %}
+{% extends "assignments/assign_base.html" %}
 
 {% comment %}
     Context:
@@ -8,12 +8,20 @@
 {% endcomment %}
 
 
+{% block title %}Evaluate{% endblock title %}
 
-{% block dash-content %}
-    <h2>Enter Assignment ID provided for evaluation of the Assignment</h2>
+
+{% block assign-content-head %}
+    Enter Assignment ID provided for evaluation of the Assignment
+{% endblock assign-content-head %}
+
+
+
+
+{% block assign-content %}
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Get Info">
     </form>
-{% endblock dash-content %}
+{% endblock assign-content %}

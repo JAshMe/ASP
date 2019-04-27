@@ -1,0 +1,15 @@
+.central-box{
+    top:20vh;
+}
+
+.card-header{
+    background-color: #8f1dd9;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+#not-account{
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: -0.5px;
+}

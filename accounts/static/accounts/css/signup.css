@@ -1,0 +1,20 @@
+body{
+    height: 120vh;
+}
+
+.central-box{
+    top:3vw;
+}
+
+
+
+.card-header{
+    background-color: #8f1dd9;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+
+
+

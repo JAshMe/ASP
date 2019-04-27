@@ -1,0 +1,54 @@
+/** Base Style Sheet **/
+
+body{
+    height: 100vh;
+    font-family: 'PT Sans', sans-serif;
+    background: url("/static/ASP/img/svg/box_back.svg") no-repeat fixed ;
+    background-size: 100vw 100%;
+}
+
+.btn-outline-dark{
+    color : white;
+    border-color: white;
+}
+
+.btn-outline-dark:hover{
+    border-color: white;
+    background-color: white;
+    color: #8f1dd9
+
+}
+
+.btn-outline-dark:not(:disabled):not(.disabled).active, .btn-outline-dark:not(:disabled):not(.disabled):active, .show > .btn-outline-dark.dropdown-toggle{
+    border-color: white;
+    background-color: white;
+    color: #8f1dd9
+}
+
+.btn-outline-dark.focus, .btn-outline-dark:focus{
+    box-shadow: 0 0 0 .1rem floralwhite;
+}
+
+
+.overlay-div{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100vw;
+    height: 110vh;
+    opacity: 0.1;
+    z-index: 5;
+}
+
+
+.small{
+    font-size: small;
+}
+
+.errorlist{
+    display: block;
+    color: var(--danger);
+    text-align: center;
+}
+

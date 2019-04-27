@@ -1,0 +1,66 @@
+{% extends "ASP/base.html" %}
+
+{#For creating a template with central box#}
+{#Generally for Login and SignUp#}
+
+{% block ext-style %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "accounts/css/box_base.css" %}">
+{% endblock ext-style %}
+
+{% block content %}
+
+    {% if acc_created or logout %}
+        <div class="notif">
+            {% if acc_created %}
+                <span>You account has been successfully created. Please Login to continue.</span>
+             {% endif %}
+
+            {% if logout %}
+                <span> You have been successfully logged out.</span>
+            {% endif %}
+
+            <div class="cross">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </div>
+
+        </div>
+    {% endif %}
+
+
+
+
+
+
+    <div class="overlay-div"></div>
+
+    <div class="upside-div">
+        <a href="{% url "index" %}">
+            <button class="btn btn-outline-dark upside-btn">
+                <span class="upside-span"> Back to Main Page &nbsp;
+                    <i class="fas fa-chevron-circle-down" aria-hidden="true"></i>
+                </span>
+            </button>
+            </a>
+    </div>
+
+    <!-- Central Box -->
+    <div class="central-box">
+        {% block box-content %}
+
+
+
+        {% endblock box-content %}
+    </div>
+
+{% endblock content %}
+
+
+{% block int-scripts %}
+    <script>
+        $(".cross").click(function(){
+           $(this).parent().slideUp();
+        });
+    </script>
+{% endblock %}
+

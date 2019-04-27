@@ -14,19 +14,168 @@
     {% if is_stud %} Student {% else %} Teacher {% endif %} Signup
 {%  endblock title %}
 
-{% block box-head %}
-    {% if is_stud %} Student {% else %} Teacher {% endif %} Signup
+{% block ext-style %}
+    {% load staticfiles %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static "accounts/css/signup.css" %}">
 {% endblock %}
 
+
+
+
 {% block box-content %}
-    <form method="post">
-        {% csrf_token %}
-        {{ userform.as_p}}
-        {% if is_stud %}
-            {{ studform.as_p }}
-        {% else %}
-            {{ teacherform.as_p }}
-        {% endif %}
-        <input type="submit" value="Sign Up!">
-    </form>
+
+    <div class="offset-md-2 col-md-8">
+        <div class="card">
+
+            <div class="card-header">
+                 {% if is_stud %} Student {% else %} Teacher {% endif %} Signup
+            </div>
+
+            <div class="card-body">
+                <div class="box-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ userform.non_field_errors}}
+                        {{ studform.non_field_errors }}
+                        {{ teacherform.non_field_errors }}
+
+                        <div class="form-group row">
+                            <label for="{{ userform.username.id_for_label }}" class="col-md-3 col-form-label col-form-label-lg">
+                                {% if is_stud %}
+                                    Registration No.:
+                                {% else %}
+                                    Employee ID:
+                                {% endif %}
+                            </label>
+                            <div class="col-md-5">
+                                {{ userform.username }}
+                                {% if is_stud %}
+                                    <small class="form-text text-muted">
+                                        Your Registration No. will become your UID.
+                                    </small>
+                                {% else %}
+                                    <small class="form-text text-muted">
+                                    Your Employee ID will become your UID.
+                                </small>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-4">
+                                {% for error in userform.username.errors %}
+                                    <span class="errorlist">{{ error|escape }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <label for="{{ userform.password1.id_for_label }}">
+                                    {{ userform.password1.label }}:
+                                </label>
+                                {{ userform.password1 }}
+                                {{ userform.password1.errors }}
+                            </div>
+
+                            <div class="col-md-1"></div>
+
+                            <div class="form-group col-md-5">
+                                <label for="{{ userform.password2.id_for_label }}">
+                                    {{ userform.password2.label }}:
+                                </label>
+                                {{ userform.password2 }}
+                                {{ userform.password2.errors }}
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-group col-md-5">
+                                <label for="{{ userform.first_name.id_for_label }}">{{ userform.first_name.label }}:</label>
+                                {{ userform.first_name }}
+                                {{ userform.first_name.errors }}
+                            </div>
+
+                            <div class="col-md-1"></div>
+
+                            <div class="form-group col-md-5">
+                                <label for="{{ userform.last_name.id_for_label }}">
+                                    {{ userform.last_name.label }}:
+                                </label>
+                                {{ userform.last_name }}
+                                {{ userform.last_name.errors }}
+                            </div>
+
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <label for="{{ userform.email.id_for_label }}">
+                                    {{ userform.email.label }}:
+                                </label>
+                                {{ userform.email }}
+                                {{ userform.email.errors }}
+                            </div>
+{# --------------------------------------- UserForm Finishes --------------------------- #}
+                            <div class="col-md-1">  </div>
+
+                            {% if is_stud %}
+
+                                <div class="form-group col-md-5">
+                                    <label for="{{ studform.prog.id_for_label }}">{{ studform.prog.label }}:</label>
+                                    {{ studform.prog }}
+                                    {{ studform.prog.errors }}
+                                </div>
+
+                            {% else %}
+
+                                <div class="form-group col-md-5">
+                                    <label for="{{ teacherform.dept.id_for_label }}">{{ teacherform.dept.label }}:</label>
+                                    {{ teacherform.dept }}
+                                    {{ teacherform.dept.errors }}
+                                </div>
+
+                            {% endif %}
+
+                        </div>
+
+                        {% if is_stud %}
+
+                            <div class="form-row">
+
+                                <div class="form-group col-md-8">
+                                    <label for="{{ studform.bra.id_for_label }}">
+                                        {{ studform.bra.label }}:
+                                    </label>
+                                    {{ studform.bra }}
+                                    {{ studform.bra.errors }}
+                                </div>
+
+                                <div class="col-md-1"></div>
+
+                                <div class="form-group col-md-2">
+                                    <label for="{{ studform.sem.id_for_label }}">
+                                        {{ studform.sem.label }}:
+                                    </label>
+                                    {{ studform.sem }}
+                                    {{ studform.sem.errors }}
+                                </div>
+
+                            </div>
+
+                        {% else %}
+                            <div class="form-group">
+
+                                <label for="{{ teacherform.bio.id_for_label }}">
+                                    {{ teacherform.bio.label }}:
+                                </label>
+                                {{ teacherform.bio }}
+                                {{ teacherform.bio.errors }}
+                            </div>
+                        {% endif %}
+                        <input class="btn btn-success" type="submit" value="Sign Up!">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock box-content %}

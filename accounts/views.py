@@ -18,6 +18,7 @@ class LoginPageView(LoginView):
 
     template_name = "accounts/login.html"
     redirect_authenticated_user = True
+    form_class = LoginForm
 
     def get_context_data(self, **kwargs):
         """

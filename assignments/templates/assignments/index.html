@@ -1,17 +1,54 @@
-{% extends "accounts/base.html" %}
+{% extends "ASP/base.html" %}
+
+
+{% block ext-style %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "assignments/css/index.css" %}">
+{% endblock %}
 
 {% block content %}
-    <div align="center">
-        <div align="right">
-            <a href="{% url "accounts:login" %}">Login</a>
-        </div>
-        <h1>Assignment Submission Portal</h1>
-{#        <button>Get Started</button>#}
-        <br><br>
-        <div>
-            <a href="{% url "accounts:stud_signup" %}"><button>Sign Up as Student</button></a>&nbsp;&nbsp;&nbsp;
-            <a href="{% url "accounts:teacher_signup" %}"><button>Sign Up as Teacher</button></a>
+
+    <div class="row" id="nav-header">
+        <div class="login-div offset-md-9 col-md-2">
+             <a href="{% url "accounts:login" %}">
+                <button class="btn btn-outline-dark col-md-12">
+                    Login &nbsp;<i class="fas fa-user-circle" aria-hidden="true"></i>
+                </button>
+             </a>
         </div>
     </div>
+
+    <div class="row col-md-6" id="main-head">
+            <div class="row col-md-12" id="inst-head">
+                MNNIT, Allahabad
+            </div>
+            <div class="hr col-md-4"></div>
+            <div class="row col-md-12" id="project-head">
+                Assignment Submission Portal
+            </div>
+            <div class="row col-md-12">
+                <div class="col-md-4" id="get-started-div">
+                    <a href="{% url "accounts:teacher_signup" %}">
+                        <button class="btn btn-outline-dark col-md-12">
+                            <span>Get Started &nbsp;</span>
+                            <span class="glyph"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i><br></span>
+                            <span class="small">as Teacher</span>
+                        </button>
+                    </a>
+                </div>
+                <div class="col-md-4" id="get-started-div">
+                    <a href="{% url "accounts:stud_signup" %}">
+                        <button class="btn btn-outline-dark col-md-12">
+                            <span>Get Started &nbsp;</span>
+
+                                <span class="glyph"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i><br></span>
+                                <span class="small">as Student</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+    </div>
+
+
 {% endblock %}
 

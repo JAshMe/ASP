@@ -1,25 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="484cc234-88a3-4038-8a23-d0493046b7a0" name="Default Changelist" comment="Student End Completed">
-      <change afterPath="$PROJECT_DIR$/accounts/form_funcs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/accounts/css/box_base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/accounts/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/accounts/css/signup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/ASP/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/JAshMe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/JAshMe.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ASP/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ASP/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/box_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/box_base.html" afterDir="false" />
+    <list default="true" id="484cc234-88a3-4038-8a23-d0493046b7a0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignments/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignments/static/assignments/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/static/assignments/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignments/templates/assignments/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/templates/assignments/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,23 +32,20 @@
     <splitter split-orientation="horizontal" split-proportion="0.43797275">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/static/ASP/css/base.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="646">
+                <state relative-caret-position="663">
                   <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/assignments/models.py">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-                  <folding>
-                    <element signature="e#0#28#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="221">
+                  <caret line="14" column="81" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
                 </state>
               </provider>
             </entry>
@@ -74,13 +54,18 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/ASP/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="273">
+                <state relative-caret-position="307">
                   <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/accounts/static/accounts/css/logged_in_base.css">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
@@ -136,7 +121,6 @@
         <option value="$PROJECT_DIR$/assignments/templates/assignments/assign_success.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/dash_base.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/base.html" />
-        <option value="$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html" />
         <option value="$PROJECT_DIR$/ASP/settings.py" />
         <option value="$PROJECT_DIR$/accounts/form_funcs.py" />
         <option value="$PROJECT_DIR$/assignments/templates/assignments/index.html" />
@@ -152,6 +136,7 @@
         <option value="$PROJECT_DIR$/static/ASP/css/base.css" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/login.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/box_base.html" />
+        <option value="$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html" />
       </list>
     </option>
   </component>
@@ -184,12 +169,6 @@
               <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
               <item name="ASP" type="462c0819:PsiDirectoryNode" />
               <item name="accounts" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASP" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -268,6 +247,12 @@
               <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
               <item name="ASP" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ASP" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="ASP" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ASP" type="b2602c69:ProjectViewProjectNode" />
@@ -298,11 +283,11 @@
       <recent name="E:\Sem_8\Major_Project\ASP\assignments\templates\assignments" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Sem_8\Major_Project\ASP\accounts\static\accounts\css" />
       <recent name="E:\Sem_8\Major_Project\ASP\templates\ASP" />
       <recent name="E:\Sem_8\Major_Project\ASP\static\ASP" />
       <recent name="E:\Sem_8\Major_Project\ASP\static" />
       <recent name="E:\Sem_8\Major_Project\ASP\accounts" />
-      <recent name="E:\Sem_8\Major_Project\ASP\assignments\media\20154135\code" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -354,7 +339,7 @@
       <updated>1555794482363</updated>
       <workItem from="1555794491205" duration="30711000" />
       <workItem from="1556094611468" duration="77866000" />
-      <workItem from="1556285097003" duration="43396000" />
+      <workItem from="1556285097003" duration="45182000" />
     </task>
     <task id="LOCAL-00001" summary="Assignment Models Created">
       <created>1556145739883</created>
@@ -398,17 +383,23 @@
       <option name="project" value="LOCAL" />
       <updated>1556290556763</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Front End Completed till Login">
+      <created>1556373857581</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1556373857581</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169641000" />
+    <option name="totallyTimeSpent" value="171427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.19818456" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19818456" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -441,7 +432,8 @@
     <MESSAGE value="Assignment Upload Continued" />
     <MESSAGE value="Student End Completed" />
     <MESSAGE value="Template Hierarchy Sorted" />
-    <option name="LAST_COMMIT_MESSAGE" value="Template Hierarchy Sorted" />
+    <MESSAGE value="Front End Completed till Login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Front End Completed till Login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -638,18 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-          <folding>
-            <element signature="e#341#347#0#HTML" expanded="true" />
-            <element signature="e#347#353#0#HTML" expanded="true" />
-            <element signature="e#353#359#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/assign_base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -748,16 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="919">
@@ -786,17 +756,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ASP/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/ASP/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
+        <state relative-caret-position="663">
           <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ASP/base.html">
+    <entry file="file://$PROJECT_DIR$/accounts/static/accounts/css/logged_in_base.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+        <state relative-caret-position="221">
+          <caret line="14" column="81" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
         </state>
       </provider>
     </entry>

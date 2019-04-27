@@ -10,9 +10,16 @@
     }
 {% endcomment %}
 
+{% block ext-style %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "accounts/css/logged_in_base.css" %}">
+{% endblock %}
+
 
 
 {% block content %}
+
+    <di
 
     <!-- Nav Bar -->
     <div align="right">

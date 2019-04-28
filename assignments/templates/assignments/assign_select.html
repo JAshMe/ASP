@@ -12,16 +12,27 @@
 
 
 {% block assign-content-head %}
-    Enter Assignment ID provided for evaluation of the Assignment
+   Start Evaluation
 {% endblock assign-content-head %}
 
+{% block ext-style %}
+    {{ block.super }}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "assignments/css/assign_select.css" %}">
+{% endblock %}
 
 
 
 {% block assign-content %}
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Get Info">
+        {{ form.non_field_errors }}
+        <div class="form-group">
+            <label class="col-form-label-lg" for="{{ form.assign_id.id_for_label }}">{{ form.assign_id.label }}:</label>
+            {{ form.assign_id }}
+            <small class="form-text text-muted">{{ form.assign_id.help_text }}</small>
+            {{ form.assign_id.errors }}
+        </div>
+        <input class="btn btn-primary" type="submit" value="Proceed">
     </form>
 {% endblock assign-content %}

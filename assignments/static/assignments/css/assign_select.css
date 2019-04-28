@@ -2,8 +2,10 @@ body{
     background-image: url("/static/ASP/img/png/assign_back.png");
     background-size: 100vw 120vh;
 }
+.card{
+    margin-top: 10vh;
+}
 
 .card-header{
-    text-align: center;
-    font-size: 1.5em;
+    background-color: #264de3;
 }

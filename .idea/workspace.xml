@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="484cc234-88a3-4038-8a23-d0493046b7a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assignments/env/hadoop-cluster-start.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignments/env/hadoop-cluster-stop.sh" afterDir="false" />
+    <list default="true" id="484cc234-88a3-4038-8a23-d0493046b7a0" name="Default Changelist" comment="Front End Completed till Login">
+      <change afterPath="$PROJECT_DIR$/assignments/static/assignments/css/assign_select.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/JAshMe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/JAshMe.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/static/accounts/css/logged_in_base.css" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/static/accounts/css/logged_in_base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignments/env/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/env/Vagrantfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignments/env/start-delpoyment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/env/start-delpoyment.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/static/assignments/css/add_assign.css" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/static/assignments/css/add_assign.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/templates/assignments/assign_eval.html" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/templates/assignments/assign_eval.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignments/templates/assignments/assign_select.html" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/templates/assignments/assign_select.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,23 +35,62 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.43797275">
+    <splitter split-orientation="horizontal" split-proportion="0.51059">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/static/ASP/css/base.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="663">
-                  <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+                <state relative-caret-position="238">
+                  <caret line="20" selection-start-line="20" selection-end-line="20" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/assign_eval.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="374">
+                  <caret line="18" column="80" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="80" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html">
+            <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/assign_select.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="239">
-                  <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+                <state relative-caret-position="357">
+                  <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/add_assign.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="12" selection-start-line="12" selection-end-line="16" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/assignments/forms.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="339">
+                  <caret line="76" column="104" selection-start-line="76" selection-start-column="104" selection-end-line="76" selection-end-column="104" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/assign_success.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="40" selection-start-column="40" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -62,17 +102,35 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/ASP/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="307">
-                  <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+                <state relative-caret-position="273">
+                  <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/assignments/static/assignments/css/assign_base.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="8" selection-start-line="8" selection-end-line="8" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/assignments/static/assignments/css/add_assign.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret selection-end-line="3" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/accounts/static/accounts/css/logged_in_base.css">
+            <entry file="file://$PROJECT_DIR$/assignments/static/assignments/css/assign_select.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" selection-start-line="1" selection-end-line="1" />
+                <state relative-caret-position="102">
+                  <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
                 </state>
               </provider>
             </entry>
@@ -96,10 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/accounts/__init__.py" />
-        <option value="$PROJECT_DIR$/accounts/admin.py" />
-        <option value="$PROJECT_DIR$/accounts/apps.py" />
-        <option value="$PROJECT_DIR$/accounts/startup.py" />
         <option value="$PROJECT_DIR$/assignments/templates/assignments/base.html" />
         <option value="$PROJECT_DIR$/assignments/static/attendance/css/base.css" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/stud_signup.html" />
@@ -114,39 +168,43 @@
         <option value="$PROJECT_DIR$/assignments/mixins.py" />
         <option value="$PROJECT_DIR$/accounts/mixins.py" />
         <option value="$PROJECT_DIR$/assignments/templates/assignments/env_select.html" />
-        <option value="$PROJECT_DIR$/assignments/forms.py" />
-        <option value="$PROJECT_DIR$/assignments/urls.py" />
         <option value="$PROJECT_DIR$/assignments/portscanner.py" />
         <option value="$PROJECT_DIR$/assignments/admin.py" />
-        <option value="$PROJECT_DIR$/assignments/views.py" />
-        <option value="$PROJECT_DIR$/accounts/templates/accounts/stud_dash.html" />
-        <option value="$PROJECT_DIR$/accounts/templates/accounts/teacher_dash.html" />
         <option value="$PROJECT_DIR$/assignments/templates/assignments/side-content.html" />
-        <option value="$PROJECT_DIR$/assignments/templates/assignments/assign_detail.html" />
-        <option value="$PROJECT_DIR$/assignments/templates/assignments/assign_eval.html" />
-        <option value="$PROJECT_DIR$/assignments/templates/assignments/assign_base.html" />
-        <option value="$PROJECT_DIR$/assignments/templates/assignments/assign_select.html" />
-        <option value="$PROJECT_DIR$/assignments/templates/assignments/add_assign.html" />
         <option value="$PROJECT_DIR$/assignments/templates/assignments/assign_success.html" />
-        <option value="$PROJECT_DIR$/accounts/templates/accounts/dash_base.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/base.html" />
         <option value="$PROJECT_DIR$/ASP/settings.py" />
-        <option value="$PROJECT_DIR$/accounts/form_funcs.py" />
         <option value="$PROJECT_DIR$/assignments/templates/assignments/index.html" />
         <option value="$PROJECT_DIR$/assignments/static/assignments/css/index.css" />
         <option value="$PROJECT_DIR$/accounts/static/accounts/css/signup_css.css" />
         <option value="$PROJECT_DIR$/accounts/forms.py" />
-        <option value="$PROJECT_DIR$/accounts/views.py" />
-        <option value="$PROJECT_DIR$/templates/ASP/base.html" />
         <option value="$PROJECT_DIR$/assignments/models.py" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/signup.html" />
         <option value="$PROJECT_DIR$/accounts/static/accounts/css/login.css" />
         <option value="$PROJECT_DIR$/accounts/static/accounts/css/box_base.css" />
-        <option value="$PROJECT_DIR$/static/ASP/css/base.css" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/login.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/box_base.html" />
+        <option value="$PROJECT_DIR$/templates/ASP/base.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html" />
         <option value="$PROJECT_DIR$/accounts/static/accounts/css/logged_in_base.css" />
+        <option value="$PROJECT_DIR$/static/ASP/css/base.css" />
+        <option value="$PROJECT_DIR$/accounts/templates/accounts/stud_dash.html" />
+        <option value="$PROJECT_DIR$/accounts/templates/accounts/teacher_dash.html" />
+        <option value="$PROJECT_DIR$/accounts/views.py" />
+        <option value="$PROJECT_DIR$/assignments/views.py" />
+        <option value="$PROJECT_DIR$/assignments/urls.py" />
+        <option value="$PROJECT_DIR$/accounts/static/accounts/css/dash_base.css" />
+        <option value="$PROJECT_DIR$/accounts/templates/accounts/dash_base.html" />
+        <option value="$PROJECT_DIR$/accounts/form_funcs.py" />
+        <option value="$PROJECT_DIR$/assignments/templates/assignments/add_assign.html" />
+        <option value="$PROJECT_DIR$/assignments/templates/assignments/assign_detail.html" />
+        <option value="$PROJECT_DIR$/assignments/templates/assignments/assign_base.html" />
+        <option value="$PROJECT_DIR$/assignments/static/assignments/css/assign_base.css" />
+        <option value="$PROJECT_DIR$/assignments/templates/assignments/assign_eval.html" />
+        <option value="$PROJECT_DIR$/assignments/forms.py" />
+        <option value="$PROJECT_DIR$/assignments/static/assignments/css/add_assign.css" />
+        <option value="$PROJECT_DIR$/assignments/templates/assignments/assign_select.html" />
+        <option value="$PROJECT_DIR$/assignments/static/assignments/css/assign_select.css" />
       </list>
     </option>
   </component>
@@ -162,7 +220,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,6 +291,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -310,7 +368,8 @@
       <updated>1555794482363</updated>
       <workItem from="1555794491205" duration="30711000" />
       <workItem from="1556094611468" duration="77866000" />
-      <workItem from="1556285097003" duration="45658000" />
+      <workItem from="1556285097003" duration="48164000" />
+      <workItem from="1556381363990" duration="27717000" />
     </task>
     <task id="LOCAL-00001" summary="Assignment Models Created">
       <created>1556145739883</created>
@@ -361,20 +420,28 @@
       <option name="project" value="LOCAL" />
       <updated>1556373857581</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Most FrontEnd Completed">
+      <created>1556439375633</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556439375633</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171903000" />
+    <option name="totallyTimeSpent" value="202126000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19818456" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3275862" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -404,32 +471,10 @@
     <MESSAGE value="Student End Completed" />
     <MESSAGE value="Template Hierarchy Sorted" />
     <MESSAGE value="Front End Completed till Login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Front End Completed till Login" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/accounts/views.py</url>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Most FrontEnd Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Most FrontEnd Completed" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/accounts/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-709" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/startup.py" />
     <entry file="file://$PROJECT_DIR$/../ASPenv/Lib/site-packages/django/apps/registry.py" />
     <entry file="file://$PROJECT_DIR$/accounts/admin.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -459,16 +504,6 @@
     <entry file="file://$PROJECT_DIR$/assignments/env/ap_sp.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-          <folding>
-            <element signature="e#30#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ASP/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
@@ -480,13 +515,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../ASPenv/Lib/site-packages/django/db/backends/utils.py" />
-    <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/env_select.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/mixins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -504,13 +532,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ASPenv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="382" selection-start-line="382" selection-end-line="382" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ASPenv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py" />
     <entry file="file://$PROJECT_DIR$/assignments/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -521,13 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignments/portscanner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -535,82 +550,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/teacher_dash.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/stud_dash.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/assign_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/assign_success.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/assign_eval.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="243" column="50" selection-start-line="243" selection-start-column="50" selection-end-line="243" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/add_assign.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/assign_select.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ASP/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/assign_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/static/assignments/css/box_base.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/static/assignments/css/box_base.css" />
     <entry file="file://$PROJECT_DIR$/ASP/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
@@ -625,56 +565,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="67" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/static/assignments/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-            <element signature="e#1883#3776#0" />
-            <element signature="e#3811#5534#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#72#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/static/accounts/css/signup.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" selection-start-line="10" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -685,31 +579,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/dash_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/static/accounts/css/box_base.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="919">
-          <caret line="85" column="63" selection-start-line="85" selection-start-column="63" selection-end-line="85" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/box_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
@@ -720,23 +593,179 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/form_funcs.py">
+    <entry file="file://$PROJECT_DIR$/accounts/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        <state relative-caret-position="782">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ASP/base.html">
+    <entry file="file://$PROJECT_DIR$/assignments/static/assignments/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="45" column="27" lean-forward="true" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+        <state relative-caret-position="289">
+          <caret line="34" column="26" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="34" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/teacher_dash.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/stud_dash.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/env_select.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="72" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+          <folding>
+            <element signature="e#30#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+            <element signature="e#657#2086#0" />
+            <element signature="e#2173#2742#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+            <element signature="e#491#1879#0" />
+            <element signature="e#1910#3803#0" />
+            <element signature="e#3838#5561#0" />
+            <element signature="e#5737#6045#0" />
+            <element signature="e#6131#7006#0" />
+            <element signature="e#6079#6122#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/static/accounts/css/dash_base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/box_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#72#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/static/accounts/css/logged_in_base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/dash_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1802">
+          <caret line="92" column="22" lean-forward="true" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/form_funcs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/assign_success.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/assign_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/assign_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/ASP/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assignments/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="-305">
           <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -744,24 +773,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/ASP/css/base.css">
+    <entry file="file://$PROJECT_DIR$/assignments/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+        <state relative-caret-position="339">
+          <caret line="76" column="104" selection-start-line="76" selection-start-column="104" selection-end-line="76" selection-end-column="104" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/logged_in_base.html">
+    <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/assign_eval.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="374">
+          <caret line="18" column="80" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/static/accounts/css/logged_in_base.css">
+    <entry file="file://$PROJECT_DIR$/templates/ASP/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="273">
+          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/static/assignments/css/assign_base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/static/assignments/css/add_assign.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/add_assign.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/templates/assignments/assign_select.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/static/assignments/css/assign_select.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>

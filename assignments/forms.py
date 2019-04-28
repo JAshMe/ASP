@@ -74,7 +74,15 @@ class AssignSelectForm(Form):
         max_length=10,
         min_length=10,
         required=True,
+        help_text="Please Enter the Assignment ID provided to you by the student for his/her evaluation. "
     )
+
+    def __init__(self, *args, **kwargs):
+        """
+        To customize widgets
+        """
+        super().__init__(*args, **kwargs)
+        update_attr(self.fields['assign_id'], 'class', 'form-control form-control-lg')
 
     def clean_assign_id(self):
         """

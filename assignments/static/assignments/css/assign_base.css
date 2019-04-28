@@ -1,0 +1,10 @@
+table tr:nth-child(1){
+    font-size: 1.5em;
+}
+
+.card-header{
+    background-color: #b20e84;
+    font-size: 1.8em;
+    text-align: center;
+
+}

@@ -16,15 +16,17 @@ def update_attr(field, attr, value):
     })
 
 
-def update_all_inputs(field_dict, attr, value):
+def update_all_inputs(field_dict, attr, value, non_control_field=None):
     """
     To update all the inputs of a form
     :param field_dict: Dic containing all the FormFields
      :param attr: String: Attribute to change
     :param value: String: Value of attribute
+    :param non_control_field: Dict containing non control fields
     """
 
     for field in field_dict:
-        field_dict[field].widget.attrs.update({
-            attr: value
-        })
+        if (non_control_field is None) or (field not in non_control_field):
+            field_dict[field].widget.attrs.update({
+                attr: value
+            })

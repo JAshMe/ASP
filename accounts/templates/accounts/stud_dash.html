@@ -4,13 +4,16 @@
     Context:
         {
             user: User object whose dashboard to be shown
+            form : EnvSelectForm
         }
 {% endcomment %}
 
 {% block href1 %}#{% endblock href1 %}
-{% block btn1 %}View Past Assignments{% endblock btn1 %}
+{% block big-btn1 %}View{% endblock big-btn1 %}
+{% block small-btn1 %}Past Assignments{% endblock small-btn1 %}
 
 {% block href2 %}{% url "assignments:add-assign" %}{% endblock href2 %}
-{% block btn2 %}Submit a New Assignment{% endblock btn2 %}
+{% block big-btn2 %}Submit {% endblock big-btn2 %}
+{% block small-btn2 %}A New Assignment{% endblock small-btn2 %}
 
 {% block dash-content %}{% endblock %}

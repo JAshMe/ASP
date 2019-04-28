@@ -1,0 +1,50 @@
+.overlay-div{
+    top: 33vh;
+    height: 33vh;
+
+}
+
+.button-container-fluid{
+    position: relative;
+    padding-top: 10vh;
+    height: 33vh;
+    /*top: -30vh;*/
+    z-index: 10;
+}
+
+.form-container-fluid{
+    position: relative;
+    height: 33vh;
+    z-index: 10;
+
+}
+
+.btn-container{
+    position: relative;
+    height: 33vh;
+    top: 23vh;
+    overflow: hidden;
+}
+
+.select-env{
+    text-align: center;
+    color: black;
+    padding-top: 1vh;
+    font-size: 1.5em;
+}
+
+
+
+.big-span{
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+
+.btn-row div:nth-child(1) button:hover{
+    color: #471db2
+}
+
+.btn-row div:nth-child(3) button:hover{
+    color: #d4046c
+}
+

@@ -15,6 +15,7 @@
 
     {% include "assignments/assign_detail.html" %}
 
-    <a href="{% url "assignments:assign-eval" assign.pk %}"><button>Evaluate!</button></a>
+    <a href="{% url "assignments:assign-eval" assign.pk %}"><button class="btn btn-primary col-md-4 offset-1">Evaluate!</button></a>
+    <button class="btn btn-success col-md-4 offset-1">Mark as Evaluated</button></a>
 
 {% endblock assign-content %}

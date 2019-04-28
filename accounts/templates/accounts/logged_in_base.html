@@ -19,13 +19,51 @@
 
 {% block content %}
 
-    <di
-
     <!-- Nav Bar -->
-    <div align="right">
-        <a href="{% url "accounts:choose_dash" %}">Back to Dashboard</a>&nbsp;&nbsp;&nbsp;
-        <a href="{% url "accounts:logout" %}"><button>Logout</button></a>
-    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url "index" %}">
+            Assignment Submission Portal
+            <div class="hr"></div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dash-navbar"  aria-controls="dash-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="dash-navbar">
+
+            <form class="form-inline">
+                <a href="{% if user.is_stud %}
+                            {% url "accounts:stud_dash" %}
+                        {% else %}
+                            {% url "accounts:teacher_dash" %}
+                        {% endif %}">
+                    <button class="btn btn-sm btn-outline-danger mr-sm-3" type="button">
+                        <i class="fa fa-chevron-circle-left fa-2x"></i>
+                        <span>Dashboard</span>
+                    </button>
+                </a>
+            </form>
+
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user-circle fa-2x"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <span class="user-hi dropdown-item plain-text">Hi, {{ user.get_full_name }}</span>
+                        <span class="user-info dropdown-item plain-text">{{ user.studentprofile.bra }}</span>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Edit Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url "accounts:logout" %}">Logout</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
 
     {% block logged-in-content %}{% endblock logged-in-content %}
 {% endblock %}

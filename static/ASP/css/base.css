@@ -15,14 +15,15 @@ body{
 .btn-outline-dark:hover{
     border-color: white;
     background-color: white;
-    color: #8f1dd9
+    color: #8f1dd9;
 
 }
 
 .btn-outline-dark:not(:disabled):not(.disabled).active, .btn-outline-dark:not(:disabled):not(.disabled):active, .show > .btn-outline-dark.dropdown-toggle{
     border-color: white;
     background-color: white;
-    color: #8f1dd9
+    color: #8f1dd9;
+    box-shadow: 0 0 0 .1rem floralwhite;
 }
 
 .btn-outline-dark.focus, .btn-outline-dark:focus{

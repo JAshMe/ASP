@@ -4,14 +4,18 @@
     Context:
         {
             user: User object
+            form : EnvSelectForm
         }
 {% endcomment %}
 
 {% block href1 %}#{% endblock href1 %}
-{% block btn1 %}Past Evaluated Assignments{% endblock btn1 %}
+{% block big-btn1 %}Past {% endblock big-btn1 %}
+
+{% block small-btn1 %}Evaluated Assignments{% endblock small-btn1 %}
 
 {% block href2 %}{% url "assignments:assign-select" %}{% endblock href2 %}
-{% block btn2 %}Evaluate New Assignment{% endblock btn2 %}
+{% block big-btn2 %}Evaluate {% endblock big-btn2 %}
+{% block small-btn2 %}New Assignment{% endblock small-btn2 %}
 
 
 {% block dash-content %}{% endblock dash-content %}

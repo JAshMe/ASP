@@ -1,4 +1,4 @@
-{% extends "assignments/assign_base.html" %}
+{% extends "accounts/logged_in_base.html" %}
 
 {% comment %}
     context = {
@@ -10,18 +10,53 @@
     Add Assignment
 {% endblock title %}
 
-{% block assign-content-head %}Add A New Assignment{% endblock assign-content-head %}
+{% block ext-style %}
+    {{ block.super }}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "assignments/css/add_assign.css" %}">
+{% endblock %}
 
-{% block assign-content %}
 
-        <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <br>
-            <label for="sub_t">Submission Time: &nbsp; </label>
-            {% now "d/m/Y H:i:s" %}
-            <br>
-            <input type="submit" value="Submit Assignment">
-        </form>
 
-{% endblock assign-content %}
+{% block logged-in-content %}
+
+    <div class="offset-md-3 col-md-6">
+        <div class="card">
+
+            <div class="card-header bg-primary text-white">Add Assignment</div>
+
+            <div class="card-body">
+
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+
+                    {% for field in form %}
+
+                        {% if field.field not in form.get_non_control_inputs.values %}
+                             <div class="form-group">
+                                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                {{ field }}
+                                {{ field.errors }}
+                             </div>
+                        {% else %}
+                            <div class="custom-file">
+                                {{ field }}
+                                <label class="custom-file-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                            </div>
+                        {% endif %}
+
+                    {% endfor %}
+                    <br>
+                    <label for="sub_t">Submission Time: &nbsp; </label>
+                    {% now "d/m/Y H:i:s" %}
+                    <br>
+                    <input type="submit" class="btn btn-success offset-md-4 col-md-4" value="Submit Assignment">
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock logged-in-content %}

@@ -1,12 +1,26 @@
 {% extends "accounts/logged_in_base.html" %}
 
 
+
+{% block ext-style %}
+    {{ block.super }}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "assignments/css/assign_base.css" %}">
+{% endblock %}
+
 {% block logged-in-content %}
 
-    <div align="center">
-        <h2>{% block assign-content-head %}{% endblock assign-content-head %}</h2>
 
-        {% block assign-content %}{% endblock assign-content %}
+     <div class="offset-md-3 col-md-6">
+        <div class="card">
+        <div class="card-header text-white">{% block assign-content-head %}{% endblock assign-content-head %}</div>
+
+        <div class="card-body" >
+            {% block assign-content %}
+
+            {% endblock assign-content %}
+        </div>
+        </div>
     </div>
 
 {% endblock %}

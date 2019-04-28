@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect, reverse
 from django.views import View
-from django.http import HttpResponse
+from django.http import FileResponse
 import abc
-
+from assignments.forms import EnvSelectForm
+from assignments.models import Environment
 from django.contrib.auth.views import LoginView, TemplateView, LogoutView
 from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 from django.views.generic import FormView
@@ -196,7 +197,9 @@ class ChooseDashboardView(LoginRequiredMixin, View):
             return redirect(to=reverse("accounts:teacher_dash"))
 
 
-class DashboardView(TemplateView):
+class DashboardView(FormView):
+
+    form_class = EnvSelectForm
 
     template_name = "accounts/login.html"
 
@@ -211,6 +214,23 @@ class DashboardView(TemplateView):
 
         return context_data
 
+    def form_valid(self, form):
+        """
+        After valid data has been POSTed, return resp file in the response
+        :param form: EnvSelectForm
+        :return: HTTPResponse
+        """
+        env_id = form.cleaned_data['env_id']
+        env = Environment.objects.get(pk=env_id)
+
+        file_to_download = env.bash_file_url
+
+        # return this file for downloading
+        return FileResponse(
+            open(file_to_download, 'rb'),
+            as_attachment=True,
+        )
+
 
 class StudDashboardView(StudLoginRequiredMixin, DashboardView):
     """
@@ -218,9 +238,6 @@ class StudDashboardView(StudLoginRequiredMixin, DashboardView):
     """
 
     template_name = "accounts/stud_dash.html"
-
-    def test_func(self):
-        return self.request.session['is_stud']
 
 
 class TeacherDashboardView(TeacherLoginRequiredMixin, DashboardView):
@@ -230,8 +247,6 @@ class TeacherDashboardView(TeacherLoginRequiredMixin, DashboardView):
 
     template_name = "accounts/teacher_dash.html"
 
-    def test_func(self):
-        return not self.request.session['is_stud']
 
 
 class LogOutView(LogoutView):

@@ -1,3 +1,77 @@
 body{
+    background-image: url("/static/ASP/img/png/dash_back.png");
+    background-size: 100vw 120vh;
+}
 
+.bg-dark{
+    background-color: transparent !important;
+}
+
+.btn-outline-danger{
+    border-color: transparent;
+    color: white;
+    overflow-x: hidden;
+    font-size: 1em;
+    width: 45px;
+    transition: width 150ms linear;
+    -moz-transition: width 150ms linear;
+}
+
+#dash-navbar .form-inline span{
+    position: relative;
+    top: -5px;
+}
+
+.btn-outline-danger:hover,.btn-outline-danger.focus, .btn-outline-danger:focus {
+    width: 125px;
+    background-color: white;
+    border-color: white;
+    color: #c10a7a;
+}
+
+.btn-outline-danger.focus, .btn-outline-danger:focus{
+    box-shadow: 0 0 0 .1rem floralwhite;
+}
+
+.btn-outline-danger:not(:disabled):not(.disabled).active, .btn-outline-danger:not(:disabled):not(.disabled):active, .show > .btn-outline-danger.dropdown-toggle{
+    background-color: white;
+    border-color: white;
+    color: #c10a7a;
+}
+
+.navbar-brand{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.hr{
+    border-top: white solid 1px;
+    width: 75%;
+    margin-left: 30%;
+}
+
+.nav-link{
+    color: white !important;
+}
+
+.dropdown-item:hover{
+    color:white;
+    background-color: #b570b7;
+}
+
+.dropdown-item:active{
+    color:white;
+    background-color: #841087;
+}
+.plain-text:hover, .plain-text:active{
+    background-color: white;
+    color: black;
+
+}
+
+.dropdown-menu{
+    left: auto;
+    right: 0;
 }

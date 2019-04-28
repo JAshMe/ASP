@@ -2,6 +2,7 @@ from django.forms.models import ModelForm
 from django.forms.widgets import *
 from django.forms import Form, ChoiceField, ValidationError, CharField
 from .models import Assignment, Environment
+from accounts.form_funcs import *
 
 
 class AssignmentForm(ModelForm):
@@ -10,7 +11,25 @@ class AssignmentForm(ModelForm):
     """
     class Meta:
         model = Assignment
-        fields = ['title', 'desc', 'env', 'assign_code', 'assign_requirements', 'run_command', ]
+        fields = ['title', 'desc', 'env', 'assign_code', 'run_command', ]
+
+    def get_non_control_inputs(self):
+        """
+        All the non-selects, non-texts, non-passes, non-textareas
+        :return: Dict of Fields
+        """
+        return {
+            'assign_code': self.fields['assign_code']
+        }
+
+    def __init__(self, *args, **kwargs):
+        """
+        To customize widgets
+        """
+        super().__init__(*args, **kwargs)
+        update_all_inputs(self.fields, 'class', 'form-control', self.get_non_control_inputs())
+
+        update_attr(self.fields['assign_code'], 'class', 'custom-file-input')
 
 
 class EnvSelectForm(Form):
@@ -22,6 +41,14 @@ class EnvSelectForm(Form):
         label="Environment",
         choices=Environment.ENVIRONMENT_CHOICES,
     )
+
+    def __init__(self, *args, **kwargs):
+        """
+        To customize widgets
+        """
+        super().__init__(*args, **kwargs)
+        update_attr(self.fields['env_id'], 'class', 'form-control')
+
 
     def clean_env_id(self):  # clean_fieldname
         """

@@ -84,31 +84,6 @@ class AssignSuccessView(LoginRequiredMixin, UserPassesTestMixin, TemplateView):
         return context_data
 
 
-class EnvSelectView(LoginRequiredMixin, FormView):
-    """
-        View to enable downloading of Different Environments
-    """
-    template_name = "assignments/env_select.html"
-    form_class = EnvSelectForm
-
-    def form_valid(self, form):
-        """
-        After valid data has been POSTed, return resp file in the response
-        :param form: EnvSelectForm
-        :return: HTTPResponse
-        """
-        env_id = form.cleaned_data['env_id']
-        env = Environment.objects.get(pk=env_id)
-
-        file_to_download = env.bash_file_url
-
-        # return this file for downloading
-        return FileResponse(
-            open(file_to_download, 'rb'),
-            as_attachment=True,
-        )
-
-
 class AssignSelectView(TeacherLoginRequiredMixin, FormView):
     """
     This view will take the AssignID as input, to evaluate that assignment

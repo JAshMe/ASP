@@ -4,6 +4,7 @@
     Context:
         {
             user: User object whose dashboard to be shown
+            form : EnvSelectForm
         }
 {% endcomment %}
 
@@ -12,25 +13,88 @@
     Dashboard
 {% endblock title %}
 
-
+{% block ext-style %}
+    {% load staticfiles %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static "accounts/css/dash_base.css" %}">
+{% endblock %}
 
 {% block logged-in-content %}
 
+    <div class="overlay-div"></div>
+    <div class="btn-container">
 
 
-    <!-- Button Row -->
-    <div class="row" align="center">
-        <a href="{% block href1 %}{% endblock href1 %}">
-            <button>{% block btn1 %}{% endblock btn1 %}</button>
-        </a>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="{% block href2 %}{% endblock href2 %}">
-            <button>{% block btn2 %}{% endblock btn2 %}</button>
-        </a>
-        &nbsp;&nbsp;&nbsp;
-        <a href="{% url "assignments:env-select" %}">
-            <button>Download Environment</button>
-        </a>
+        <!-- Button Row -->
+        <div class="container-fluid button-container-fluid">
+
+
+            <div class="row btn-row">
+                <div class="col-md-3">
+                    <a href="{% block href1 %}{% endblock href1 %}">
+                        <button class="btn btn-outline-dark col-md-12 offset-md-1">
+                            <span class="big-span">
+                                {% block big-btn1 %}{% endblock big-btn1 %}
+                            </span>
+                            <br>
+                            <span class="small-span">
+                                {% block small-btn1 %}{% endblock small-btn1 %}
+                            </span>
+                        </button>
+                    </a>
+                </div>
+
+                <div class="col-md-4 offset-md-1">
+                    <a href="{% block href2 %}{% endblock href2 %}">
+                        <button class="btn btn-outline-dark col-md-12">
+                            <span class="big-span">
+                                {% block big-btn2 %}{% endblock big-btn2 %}
+                            </span>
+                            <br>
+                            <span class="small-span">
+                                {% block small-btn2 %}{% endblock small-btn2 %}
+                            </span>
+                        </button>
+                    </a>
+                </div>
+
+                <div class="col-md-3 offset-md-1">
+                    <a href="#">
+                        <button class="btn btn-outline-dark col-md-11" id="download-env">
+                            <span class="big-span">Download</span>
+                            <br>
+                            <span class="small-span">Required Environment</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Row -->
+        <div class="container-fluid form-container-fluid">
+            <div class="select-env">Select the suitable environment to Download:</div>
+            <br>
+            <div class="row">
+                <div class="offset-md-4 col-md-4">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.non_field_errors }}
+                        <div class="form-group">
+                            <label for="{{ form.env_id.id_for_label }}:">
+                                {{ form.env_id.label }}
+                            </label>
+                            {{ form.env_id }}
+                            {{ form.env_id.errors }}
+                        </div>
+                        <input type="submit" class="btn btn-success col-md-3" value="Download">
+                        <button type="button" class="offset-md-4 col-md-3 btn btn-danger" id="back-btn">Go Back</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
 
@@ -39,6 +103,36 @@
 
     {% endblock dash-content %}
 
+    {% block int-scripts %}
+
+        <script>
+
+            //to trigger download env button
+
+            $("#download-env").click(function () {
+
+                    $(".button-container-fluid").animate({top:'-30vh'}, 'fast');
+                    $(".overlay-div").animate({opacity:0.5},'fast');
+
+                   $(".form-container-fluid").animate({top:'-33vh'}, 'fast');
+
+                });
+
+            // to go back
+            $("#back-btn").click(function () {
+
+                $(".form-container-fluid").animate({top:'0vh'}, 'fast');
+
+                 $(".overlay-div").animate({opacity:0.1},'fast');
+
+                $(".button-container-fluid").animate({top:'0vh'}, 'fast');
+
+
+            });
+
+        </script>
+
+    {% endblock %}
 
 
 {% endblock logged-in-content %}

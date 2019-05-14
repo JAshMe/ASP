@@ -40,7 +40,6 @@ class Environment(models.Model):
     ENVIRONMENT_CHOICES = (
         ('ap_sp', 'Apache Spark'),
         ('ap_hp', 'Apache Hadoop'),
-        ('hb', 'HBase'),
     )
 
     env_id = models.CharField(

@@ -47,13 +47,13 @@ if [ $? == 0 ]; then
 		SPARK_CLUSTER_COMMAND='~/spark-cluster-start.sh -l '$LINK' -c '"\"$COMMAND\""
 		echo $SPARK_CLUSTER_COMMAND
 		FINAL_COMMAND='~/go/bin/gotty -w -p 8080 '$SPARK_CLUSTER_COMMAND
-		vagrant ssh -c "$FINAL_COMMAND"
+		vagrant ssh -c "$FINAL_COMMAND" &
 	fi
 	if [[ $ENVIRONMENT == 'ap_hp' ]]; then
 		HADOOP_CLUSTER_COMMAND='~/hadoop-cluster-start.sh -l '$LINK' -c '"\"$COMMAND\""
 		echo $HADOOP_CLUSTER_COMMAND
 		FINAL_COMMAND='~/go/bin/gotty -w -p 8080 '$HADOOP_CLUSTER_COMMAND
-		vagrant ssh -c "$FINAL_COMMAND"
+		vagrant ssh -c "$FINAL_COMMAND" &
 	fi
 else
 	echo 'VM instance for this user is not running. Please run start-vm.sh script before starting deployment.' 

@@ -10,12 +10,61 @@
 
 {% block assign-content-head %}Evaluation of Assignment{% endblock assign-content-head %}
 
+{% block ext-style %}
+    {{ block.super }}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "assignments/css/assign_eval.css" %}">
+{% endblock %}
 
 {% block assign-content %}
 
+    <div class="overlay-div"></div>
+
+    <div id="loading-div">
+        <img src="{% static "ASP/img/glow.gif" %}" id="loader-image"><br>
+        Setting up VM and Deploying your Code.<br>This could take a while...<br>(Approx Time: 10mins)
+    </div>
+
     {% include "assignments/assign_detail.html" %}
 
-    <a href="{% url "assignments:assign-eval" assign.pk %}"><button class="btn btn-primary col-md-4 offset-1">Evaluate!</button></a>
+{#    <a href="{% url "assignments:assign-eval" assign.pk %}">#}
+        <button id="eval-btn" class="btn btn-primary col-md-4 offset-1">Evaluate!</button>
+{#    </a>#}
     <button class="btn btn-success col-md-4 offset-1">Mark as Evaluated</button>
 
 {% endblock assign-content %}
+
+
+{% block int-scripts %}
+    <script>
+
+        $(document).ajaxStart(function () {
+                $(".overlay-div").show();
+                $("#loading-div").show();
+            }).ajaxStop(function () {
+                $(".overlay-div").hide();
+                $("#loading-div").hide();
+        });
+
+        $("#eval-btn").click(function(){
+            // Sending AJAX request for creating VM
+
+
+
+            $.ajax({
+               url: '{% url "assignments:assign-eval" assign.pk %}',
+               timeout: 3600000,
+                datatype: "json",
+
+                success: function(data){
+                   alert(data['message']);
+                   window.open("http://127.0.0.1:" + data['port'], "_blank");
+                }
+
+            });
+
+
+        })
+
+    </script>
+{% endblock %}

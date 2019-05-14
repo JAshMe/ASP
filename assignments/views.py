@@ -1,11 +1,12 @@
 from django.shortcuts import render,reverse, redirect
 from django.views import View
 from django.views.generic import TemplateView, CreateView, FormView, DetailView
+
 from .models import Assignment, Environment, VM
-from django.http.response import FileResponse
+from django.http.response import FileResponse, JsonResponse
 from .forms import AssignmentForm, EnvSelectForm, AssignSelectForm
 import time, math, random, subprocess
-import hashlib
+import hashlib, os
 from .portscanner import get_free_port
 from accounts.mixins import *
 from django.http import HttpResponse
@@ -134,8 +135,15 @@ class EvalAssignView(TeacherLoginRequiredMixin, View):
 
         self.deploy_stud_code(ass)
 
-        web_shell_url = "http://127.0.0.1:" + str(free_port) + "/"
-        return redirect(to=web_shell_url)
+        # web_shell_url = "http://127.0.0.1:" + str(free_port) + "/"
+        response = {
+            'message': 'VM is Created and code is deployed, now you can access the terminal of the container.',
+            'port': free_port,
+        }
+
+        return JsonResponse(response)
+
+        # return redirect(to=web_shell_url)
 
     def create_vm(self):
         """
@@ -146,7 +154,7 @@ class EvalAssignView(TeacherLoginRequiredMixin, View):
         # getting required parameters for the script
         username = self.request.user.username
         free_port = str(self.get_port())
-
+        time.sleep(3)
         cmd = "assignments/env/start-vm.sh -u %s -p %s" % (username, free_port)
         print("Running " + cmd + "....")
 
@@ -168,17 +176,17 @@ class EvalAssignView(TeacherLoginRequiredMixin, View):
 
         # getting required parameters
         env_name = ass.env.env_id
-        code_url = "http://127.0.0.1:8000/" + ass.assign_code.url
+        code_url = "http://10.0.2.2:8000/" + ass.assign_code.url
 
-        code_url = "https://github.com/Abhey/SparkTestApp/archive/master.zip"
+        # code_url = "https://github.com/Abhey/SparkTestApp/archive/master.zip"
 
         run_command = ass.run_command
 
-        run_command = "/spark/bin/spark-submit /code/SparkTestApp-master/SparkApp.py"
+        # run_command = "/spark/bin/spark-submit /code/SparkTestApp-master/SparkApp.py"
         username = self.request.user.username
 
         # getting the script
-        script_url = ass.env.bash_file_url
+        script_url = os.path.join(settings.ENV_ROOT, 'start-delpoyment.sh')
 
         cmd = "%s -u %s -l %s -c \"%s\" -e %s" % (script_url, username, code_url, run_command, env_name)
 

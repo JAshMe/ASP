@@ -1,0 +1,26 @@
+.overlay-div{
+    opacity: 0.8;
+    display: none;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+
+#loading-div{
+    text-align: center;
+    position: fixed;
+    left: 40vw;
+    top:35vh;
+    background-color: white;
+    width: 20vw;
+    height: 30vh;
+    border-radius: 2px;
+    display: none;
+    z-index: 30;
+    padding: 10px;
+    font-size:0.8em;
+}
+
+#loader-image{
+    width:60%;
+}
